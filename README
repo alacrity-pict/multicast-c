@@ -1,0 +1,38 @@
+Multicast Program in C :-
+
+1. msender.c 
+	This program sends datagram messages to a group.
+
+2. mreceiver.c
+	This program receives and displays the message sent by the sender to the group.
+
+The group ip is "226.1.2.3".
+We have kept it static right now but the program can be modified to make it dynamic.
+The program has been checked on a single machine and it works.
+We'll check it on multiple machines and upload the results soon.
+
+/* Sample Output */
+
+/* Receiver */
+biswajit@biswajit-Inspiron-N5010:~$ ./mr
+Socket created successfully
+Socket reuse address successfull
+Socket binding successfull
+Group joined successfully
+
+Message from multicast sender is: hello
+
+Message from multicast sender is: bye
+
+/* Sender */
+biswajit@biswajit-Inspiron-N5010:~$ ./ms
+Socket created successfully
+Local interface set
+
+Enter multicast message :hello
+Message sent successfully
+
+Enter multicast message :bye
+Message sent successfully
+
+
