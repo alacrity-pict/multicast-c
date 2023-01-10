@@ -5,13 +5,14 @@
 #include <netinet/in.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 
 int main()
 {
 	int sck;
 	struct sockaddr_in lclSck;
 	struct ip_mreq grp;
-	struct in_addr lclInterface;
 	char buf[1024];
 	int reuse = 1;
 	int blen;
